@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Blackjack Simulator</h1>
+    <form id="settingsForm">
+        <label for="decks">Number of decks:</label>
+        <input type="number" id="decks" name="decks" min="1" max="8" value="1">
+        <br>
+        <label for="h17">H17</label>
+        <input type="radio" id="h17" name="rule" value="h17" checked>
+        <label for="s17">S17</label>
+        <input type="radio" id="s17" name="rule" value="s17">
+        <br>
+        <label for="das">Double After Split Allowed?</label>
+        <input type="checkbox" id="das" name="das">
+        <br>
+        <label for="restrictedDoubling">Restricted Doubling 9-11 only</label>
+        <input type="checkbox" id="restrictedDoubling" name="restrictedDoubling">
+        <br>
+        <label for="lateSurrender">Late Surrender</label>
+<input type="checkbox" id="lateSurrender" name="lateSurrender">
+<br>
+<label for="es10">Early Surrender against dealer's 10 (ES10)</label>
+<input type="checkbox" id="es10" name="es10">
+<br>
+        <button type="submit">Start Game</button>
+    </form>
+    <div id="resultsContainer"></div>
+
+    <div id="gameArea" style="display: none;">
+        <!-- Game elements will be generated here -->
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
